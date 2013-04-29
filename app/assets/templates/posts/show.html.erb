@@ -1,0 +1,25 @@
+<h1>Post</h1>
+
+<p>
+  <b>Title</b><br>
+  {{post.title}}
+</p>
+
+<p>
+  <b>Body</b><br>
+  {{post.body}}
+</p>
+
+<div class="form-actions">
+  <a href="/posts/{{post.id}}/edit"
+    class="btn btn-primary"><i class="icon-edit"></i>
+    Edit Post
+  </a>
+  <button ng-click="destroy()" class="btn btn-danger">
+    <i class="icon-trash"></i> Delete
+  </button>
+  <a href="/posts" class="btn">
+    Back to posts
+  </a>
+</div>
+

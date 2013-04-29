@@ -1,0 +1,37 @@
+<h1>Posts</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th>Title</th>
+        <th>Body</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="post in posts">
+      <td>
+        <a href="/posts/{{post.id}}">
+          {{post.title}}
+        </a>
+      </td>
+        <td>
+          {{post.body}}
+        </td>
+      <td>
+        <a href="/posts/{{post.id}}/edit"
+          class="btn btn-primary"><i class="icon-edit"></i>
+          Edit
+        </a>
+        <button ng-click="destroy()" class="btn btn-danger">
+          <i class="icon-trash"></i> Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <a href='/posts/new' class="btn btn-primary">
+    <i class="icon-plus"></i>New
+  </a>
+</p>

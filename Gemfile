@@ -1,9 +1,16 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
 
-gem 'mysql2'
+group :production do
+  gem 'pg'
+end
+
+group :development, :test do
+  gem 'mysql2'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -38,3 +45,5 @@ gem 'jbuilder', '~> 1.0.1'
 # gem 'debugger'
 
 gem 'angularjs_scaffold', github: 'hui/angularjs_scaffold'
+
+gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'

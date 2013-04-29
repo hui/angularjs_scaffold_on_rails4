@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/heroku/rails3_serve_static_assets.git
+  revision: 84910ceb4ca2851d650e66d3b22f5008acf253f8
+  specs:
+    rails3_serve_static_assets (0.0.1)
+
+GIT
   remote: git://github.com/hui/angularjs_scaffold.git
   revision: 29d9034d47854d3862dab4a55c3e5ccd1cc4e306
   specs:
@@ -61,6 +67,7 @@ GEM
     minitest (4.7.3)
     multi_json (1.7.2)
     mysql2 (0.3.11)
+    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -120,7 +127,9 @@ DEPENDENCIES
   jbuilder (~> 1.0.1)
   jquery-rails
   mysql2
+  pg
   rails (= 4.0.0.beta1)
+  rails3_serve_static_assets!
   sass-rails (~> 4.0.0.beta1)
   turbolinks
   uglifier (>= 1.0.3)

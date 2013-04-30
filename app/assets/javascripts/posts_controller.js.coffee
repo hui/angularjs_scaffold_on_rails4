@@ -9,13 +9,13 @@ PostsIndexCtrl = ($scope, Post) ->
       original = @post
       @post.destroy ->
         $scope.posts = _.without($scope.posts, original)
-        
+
 PostsIndexCtrl.$inject = ['$scope', 'Post'];
 
 PostsCreateCtrl = ($scope, $location, Post) ->
   $scope.save = ->
     Post.save $scope.post, (post) ->
-      $location.path "/posts/#{post.id}/edit"
+      $location.path "/posts/#{post.id}"
 
 PostsCreateCtrl.$inject = ['$scope', '$location', 'Post'];
 
@@ -59,4 +59,4 @@ PostsEditCtrl.$inject = ['$scope', '$location', '$routeParams', 'Post'];
 root.PostsIndexCtrl  = PostsIndexCtrl
 root.PostsCreateCtrl = PostsCreateCtrl
 root.PostsShowCtrl   = PostsShowCtrl
-root.PostsEditCtrl   = PostsEditCtrl 
+root.PostsEditCtrl   = PostsEditCtrl

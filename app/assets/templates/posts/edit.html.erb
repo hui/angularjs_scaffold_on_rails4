@@ -25,9 +25,9 @@
         </label>
         <div class="controls">
             <textarea name="post[body]"
+                   kindeditor
                    ng-model="post.body"
-                   class="text_area"
-                   required></textarea>
+                   class="text_area" style="height:300px; width: 700px"></textarea>
           <span ng-show="editPost.body.$error.required"
                 class="help-inline">
             Required

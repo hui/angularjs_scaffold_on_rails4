@@ -1,7 +1,7 @@
 root = global ? window
 angular = root.angular
 
-thisApp = angular.module("AngularjsScaffoldOnRails4Client", ['ngCookies', 'posts']).config(['$routeProvider', '$locationProvider' ,
+thisApp = angular.module("AngularjsScaffoldOnRails4Client", ['ngCookies', 'posts', 'kindeditor']).config(['$routeProvider', '$locationProvider' ,
 ($routeProvider, $locationProvider) ->
   #$locationProvider.hashPrefix('');
   $locationProvider.html5Mode true

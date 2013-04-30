@@ -7,7 +7,7 @@
 
 <p>
   <b>Body</b><br>
-  {{post.body}}
+  <div ng-bind-html-unsafe="post.body"></div>
 </p>
 
 <div class="form-actions">

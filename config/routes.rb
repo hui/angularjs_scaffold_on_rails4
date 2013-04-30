@@ -1,4 +1,5 @@
 AngularjsScaffoldOnRails4::Application.routes.draw do
+  post "upload" => "upload#create"
   resources :posts
 
   root to: "welcome#index"

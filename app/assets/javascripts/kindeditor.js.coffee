@@ -4,7 +4,13 @@ angular.module('kindeditor', []).directive 'kindeditor', ->
     unless ngModel then return
     ngModel.$render = (value)->
       unless ngModel.editor
-        ke = KindEditor.create $(elm[0]), basePath: '/kindeditor/', uploadJson: '/upload',afterChange: ()->
+        csrfToken = $('meta[name=csrf-token]').attr('content')
+        csrfParam = $('meta[name=csrf-param]').attr('content')
+
+        extraParams = {}
+        extraParams[csrfParam] = csrfToken
+
+        ke = KindEditor.create $(elm[0]), basePath: '/kindeditor/', uploadJson: '/upload', extraFileUploadParams: extraParams, afterChange: ()->
           if ke
             ngModel.$setViewValue(ke.html())
 

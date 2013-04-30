@@ -45,5 +45,7 @@ gem 'jbuilder', '~> 1.0.1'
 # gem 'debugger'
 
 gem 'angularjs_scaffold', github: 'hui/angularjs_scaffold'
+gem 'carrierwave'
+gem "fog", "~> 1.3.1"
 
 gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'

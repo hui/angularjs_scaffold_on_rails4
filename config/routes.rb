@@ -1,8 +1,14 @@
 AngularjsScaffoldOnRails4::Application.routes.draw do
   post "upload" => "upload#create"
-  resources :posts
+
+  scope 'api' do
+    resources :posts
+  end
 
   root to: "welcome#index"
+
+  match "*path", to: "welcome#index", via: :all
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
